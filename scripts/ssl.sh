@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EXPECTED_ARGS=3
+EXPECTED_ARGS=1
 E_BADARGS=65
 
 if [ $# -ne $EXPECTED_ARGS ]
@@ -9,9 +9,7 @@ then
   exit $E_BADARGS
 fi
 
-db_name=$1
-db_password=$2
-domain=$3
+domain=$1
 
 #PHASE 1 BEGIN - Install necessary packages
 echo "Installing Packages: update, apache2, mod-wsgi, python-pip, libssl-dev, setuptools"
