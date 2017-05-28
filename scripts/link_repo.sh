@@ -1,0 +1,23 @@
+#!/bin/bash
+
+EXPECTED_ARGS=2
+E_BADARGS=65
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+  echo "Usage: $0 name repository"
+  exit $E_BADARGS
+fi
+
+path_name=$1
+repository=$2
+
+#PHASE 2 BEGIN - Clone wapi & link
+echo "Cloning Repository"
+mkdir ~/$name ~/flask_app/wapi ~/dev ~/dev/wapi ~/dev/wapi/log
+git clone repository ~/name
+
+echo "Creating link"
+sudo ln -sT ~/name /var/www/html/$name
+sudo apachectl restart
+echo "Done (:"
