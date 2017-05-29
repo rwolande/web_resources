@@ -14,10 +14,10 @@ repository=$2
 
 #PHASE 2 BEGIN - Clone wapi & link
 echo "Cloning Repository"
-mkdir ~/$name ~/flask_app/wapi ~/dev ~/dev/wapi ~/dev/wapi/log
-git clone repository ~/name
+mkdir ~/$path_name
+git clone $repository ~/$path_name
 
 echo "Creating link"
-sudo ln -sT ~/name /var/www/html/$name
+sudo ln -sT ~/$path_name /var/www/html/$path_name
 sudo apachectl restart
 echo "Done (:"
