@@ -21,7 +21,7 @@ function get_cookie(cookie_identifier) {
     return "";
 }
 
-function check_cookie(cookie_identifier) {
+function check_cookie(cookie_identifier = "poptinis_21") {
     var value=get_cookie(cookie_identifier);
     if (value.length > 0) {
         if (value == "true") {
