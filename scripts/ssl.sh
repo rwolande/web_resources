@@ -5,7 +5,7 @@ E_BADARGS=65
 
 if [ $# -ne $EXPECTED_ARGS ]
 then
-  echo "Usage: $0 db_name db_password domain"
+  echo "Usage: $0 domain"
   exit $E_BADARGS
 fi
 

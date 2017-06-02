@@ -20,4 +20,9 @@ git clone $repository ~/$path_name
 echo "Creating link"
 sudo ln -sT ~/$path_name /var/www/html/$path_name
 sudo apachectl restart
+
+echo "Installing additional requirements"
+cd ~/$path_name;
+sudo pip install -r requirements.txt;
+
 echo "Done (:"
