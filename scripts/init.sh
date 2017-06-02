@@ -9,10 +9,10 @@ then
   exit $E_BADARGS
 fi
 
-db_name=$1
-db_password=$2
-domain=$3
-path=$4
+domain=$1
+path=$2
+db_name=$3
+db_password=$4
 
 ./ssl.sh "$domain"
 ./link_repo.sh "$path" "https://github.com/rwolande/$path"
