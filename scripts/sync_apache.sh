@@ -9,8 +9,8 @@ then
   exit $E_BADARGS
 fi
 
-domain=$3
-path=$4
+domain=$1
+path=$2
 
 #PHASE 4 BEGIN - Sync
 sudo chmod 777 /etc/apache2/sites-enabled

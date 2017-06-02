@@ -21,6 +21,12 @@ echo "Creating link"
 sudo ln -sT ~/$path_name /var/www/html/$path_name
 sudo apachectl restart
 
+#MySQL
+echo "Installing Packages: libmysqlclient-devm mysql-server"
+sudo apt-get -y install libmysqlclient-dev
+sudo apt-get -y install mysql-server
+sudo mysql_secure_installation
+
 echo "Installing additional requirements"
 cd ~/$path_name;
 sudo pip install -r requirements.txt;
